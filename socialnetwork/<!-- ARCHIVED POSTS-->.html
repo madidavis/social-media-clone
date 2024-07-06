@@ -1,0 +1,39 @@
+        <!-- ARCHIVED POSTS-->
+        {% for post in posts %}
+            <div class="row justify-content-center align-items-center bg-secondary py-2">
+                <div class="card post-group" id="id_post_div_{{post.id}}">
+                    <div class="card-body">
+                        <span><a class="card-text post-profile-link" id="id_post_profile_{{post.id}}" href="{% url 'other-profile' post.profile.id %}"> Post by {{post.profile.first_name}} {{post.profile.last_name}}</a></span>
+                        <span class="card-text post-text" id="id_post_text_{{post.id}}">{{post.post_input_text}}</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="text-muted post-date-time" id="id_post_date_time_{{post.id}}">{{post.date_time|date:"n/j/Y"}} {{post.date_time|time:"g:i A"}}</span>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+        <div class="row justify-content-center align-items-center bg-secondary py-2">
+
+            <!-- example comment section -->
+            <div class= "card" id="post_div_n_comment_section">
+                <ul class="list-group list-group-light">
+
+                    <!-- example comment form -->
+                    <li class="list-group-item">
+                        <div class="container-fluid">
+                            <div class="row flex-row">
+                                    <div class="input-group new-comment-group">
+                                        <label class="input-group-text new-comment-label" for="id_comment_input_text_n">New Comment:</label>
+                                        <input type="text" class="form-control new-comment-text" id="id_comment_input_text_n">
+                                        <button class="btn btn-light new-comment-button" onclick="addComment()" id="id_comment_button_n">Submit</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+
+        </div>

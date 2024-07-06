@@ -1,0 +1,53 @@
+{% extends "socialnetwork/navbar.html" %}
+
+{% block content %}
+{% load static %}
+
+
+<div class="d-flex flex-column justify-content-start align-items-stretch flex-nowrap bg-dark"
+    id="id_profile_content">
+
+    <!-- PAGE HEADER -->
+    <div class="bg-primary d-flex flex-column justify-content-around align-items-center py-2"
+        id="id_profile_header_row">
+        <!-- PAGE TITLE-->
+        <div class="row justify-content-center align-items-center mb-2">
+            <span class="profile-page-name" id="id_page_name">{{page_name}} {{profile.profile_user.first_name}} {{profile.profile_user.last_name}}</span>
+        </div>
+
+        <!-- PROFILE IMAGE-->
+        <div class="row justify-content-center align-items-center bg-white my-4" id="id_profile_image_div">
+            {% if profile.picture_type == 'None' %}
+                <img src="{% static 'socialnetwork/profile_image.png' %}" id="id_user_picture">
+            {% else %}
+                <img src="{% url 'photo' profile.id %}" id="id_user_picture">
+            {% endif %}
+        </div>
+
+    </div>
+
+    <!-- PAGE CONTENT -->
+    <div class="container-fluid  bg-primary justify-content-center align-items-center py-2">
+        <!-- LOAD USER PROFILE OR FOLLOWER PROFILE -->
+        {% block profile-page  %}
+        {% endblock %}
+    </div>
+
+    <!-- FOLLOWER LIST -->
+    <div class="card flex-grow-1 my-2 p-2" id="id_follower_list_div">
+    
+        <div class="card-body">
+            <h5 class="card-title mb-2">Following:</h5>
+            <ul class="list-group list-group-light">
+                {% for follower in followers %}
+                    <li class="list-group-item">
+                        <a class="text" id="id_profile_link_{{follower.profile_user.username}}" href="{% url 'other-profile' follower.id %}">{{follower.profile_user.first_name}} {{follower.profile_user.last_name}}</a>
+                    </li> 
+                {% endfor %}
+            </ul>
+        </div>
+    
+    </div>
+
+</div>
+{% endblock %}

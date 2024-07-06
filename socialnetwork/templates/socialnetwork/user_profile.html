@@ -1,0 +1,27 @@
+{% extends "socialnetwork/profile.html" %}
+{% load static %}
+
+{% block profile-page %}
+<!-- EDITABLE USER BIO -->
+<div class="card justify-content-center align-items-center my-2 p-2" id="id_profile_edit_div">
+    <form enctype="multipart/form-data" class="d-flex flex-column justify-content-center align-items-center" method="post" action="{% url 'profile'%}">
+        <div class="input-group justify-content-center align-items-center py-2 my-2" id="id_bio_edit_div">
+            {{form.user_bio}}
+        </div>
+
+        <div class="d-flex flex-row bg-primary justify-content-center align-items-center my-2" id="id_pic_edit_div">
+            <span class="mx-2">Profile Picture</span>
+            {{form.user_picture}}
+        </div>
+
+        <div class="d-flex py-2 my-2">
+            <button type="submit" class="btn btn-light" id="id_update_profile_button">Submit</button>
+        </div>
+
+        {% csrf_token %}
+
+    </form>
+</div>
+
+
+{% endblock %}

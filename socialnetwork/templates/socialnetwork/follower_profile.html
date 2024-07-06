@@ -1,0 +1,16 @@
+{% extends "socialnetwork/profile.html" %}
+{% load static %}
+
+{% block profile-page %}
+<!-- USER BIO -->
+<div class="card justify-content-center align-items-center my-2 p-2" id="id_profile_edit_div">
+    <form class="d-flex flex-column justify-content-center align-items-center" method="post" action="{% url 'other-profile' profile.id %}">
+            <textarea readonly class="form-control-plain-text py-2 my-2" id="id_user_bio"> {{profile.user_bio}}</textarea>    
+            <button type="submit" class="btn btn-light py-2 my-2" id="id_{{button_text}}">{{button_text}}</button>
+            {% csrf_token %}
+    </form>
+</div>
+
+<!-- FOLLOWER LIST -->
+
+{% endblock %}

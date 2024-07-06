@@ -1,0 +1,277 @@
+/* #################################################################################### */
+/*---- BASE PAGE STYLING ---*/
+/* #################################################################################### */
+body{
+    background: cyan !important;
+}
+
+#id_content_div{
+    min-height: 90vh !important; 
+    background-color: brown;
+}
+
+/* #################################################################################### */
+/*---- LOGIN & REGISTER STYLING ---*/
+/* #################################################################################### */
+/* CONTAINER & LAYOUT STYLING */
+/* Layout Base */
+#id_login_page_content{
+    min-height: 90vh !important;
+}
+
+
+#id_login_text_container{
+    min-width: 40% !important;
+    max-width: 50% !important;
+    height: 100% !important;
+}
+
+#id_login_header_row {
+    font-size:3vw !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#id_login_content_row {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+/* Login Page Extension*/
+#id_login_form {
+    font-size: 2.7vh !important;
+    width: 100% !important;
+}
+
+#id_login_username_container{
+    width: 100% !important;
+}
+
+#id_login_password_container{
+    width: 100% !important;
+}
+
+
+/* Register Page Extension*/
+#id_register_form {
+    font-size: 2.7vh !important;
+    width: 100% !important;
+}
+
+#id_register_username_container{
+    width: 100% !important;
+}
+
+#id_register_password_container{
+    width: 100% !important;
+}
+
+#id_register_confirm_password_container{
+    width: 100% !important;
+}
+
+#id_register_email_container{
+    width: 100% !important;
+}
+
+
+#id_register_first_name_container{
+    width: 100% !important;
+}
+
+#id_register_last_name_container{
+    width: 100% !important;
+}
+
+
+/* FORM STYLING */
+#id_username {
+    
+    width: 100% !important;
+}
+
+#id_password {
+    width: 100% !important;
+}
+
+#id_confirm_password {
+    width: 100% !important;
+}
+
+#id_email {
+    width: 100% !important;
+}
+
+#id_first_name {
+    width: 100% !important;
+}
+
+#id_last_name {
+    width: 100% !important;
+}
+
+#id_login_button {
+    font-size: 2.7vh !important;
+    width: 100% !important;
+}
+
+#id_register_button {
+    font-size: 2.7vh  !important;
+    width: 100% !important;
+}
+
+
+/* #################################################################################### */
+/*---- GLOBAL STREAM STYLING ---*/
+/* #################################################################################### */
+/** Page Header - TITLE & SEARCH */
+#id_global_header_row {
+    width: 100%;
+    height: 30%;
+}
+
+.global-page-name {
+    font-size: 5vh;
+}
+
+#id_post_container {
+    width: 100%;
+    font-size: 2.7vh !important;
+}
+
+#id_post_form {
+    font-size: 2.7vh !important;
+}
+
+#id_post_input_text_label{
+    min-width: 20%;
+    font-size: 2.7vh !important;
+
+}
+
+#id_post_input_text {
+    min-width: 50%;
+    background-color: aquamarine !important;
+    font-size: 2.7vh !important;
+    
+}
+
+#id_post_button {
+    min-width: 20%;
+    font-size: 2.7vh !important;
+}
+
+/** Page Content - POST STREAM / FORUM */
+#id_global_post_div {
+    width: 70%;
+}
+
+#id_post_container {
+    width: 100%;
+}
+
+/* #################################################################################### */
+/*---- POST STYLING ---*/
+/* #################################################################################### */
+/** Overarching Post Class */
+.post-group {
+    font-size: 2.7vh !important;
+}
+
+/** Post Content */
+.post-profile-link {
+    font-style: italic;
+}
+
+.post-text {
+    color: black;
+}
+
+.post-date-time {
+    font-style: italic;
+}
+
+/* #################################################################################### */
+/*---- COMMENT STYLING ---*/
+/* #################################################################################### */
+
+/** Overarching Comment Class */
+.comment-group {
+    font-size: 2.7vh !important;
+}
+
+/** Commment Content */
+.comment-profile-link {
+    font-style: italic;
+}
+
+.comment-text {
+    color: black;
+}
+
+.comment-date-time {
+    font-style: italic;
+}
+
+
+/** Post Comment Input */
+.new-comment-group {
+    width: 100%;
+    font-size: 2.7vh !important;
+}
+
+.new-comment-form {
+    width: 100%;
+    font-size: 2.7vh !important;
+}
+
+.new-comment-label {
+    font-size: 2.7vh !important;
+}
+
+.new-comment-text {
+    font-size: 2.7vh !important;
+}
+
+.new-comment-button {
+    font-size: 2.7vh !important;
+}
+
+
+/* #################################################################################### */
+/*---- FOLLOWER STREAM STYLING ---*/
+/* #################################################################################### */
+.follower-page-name {
+    font-size: 5vh;
+}
+
+
+/* #################################################################################### */
+/*---- PROFILE STYLING ---*/
+/* #################################################################################### */
+/** Generic Profile Items */
+.profile-page-name {
+    font-size: 5vh;
+}
+
+#id_profile_header_row {
+    width: 100%;
+}
+
+#id_user_picture {
+    width: auto;
+    max-height: 5vh !important;
+}
+
+#id_user_bio {
+    max-height: 10vh !important;
+}
+
+/** Specific User Profile Components */
+#id_bio_input_text {
+    max-height: 10vh !important;
+}
+
+
+/** Specific Follower Profile components */

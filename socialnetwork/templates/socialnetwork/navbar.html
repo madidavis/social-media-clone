@@ -1,0 +1,27 @@
+{% extends "socialnetwork/base.html" %}
+
+{% block navigation-bar %}
+<nav class= "navbar bg-light">
+    <div class="container-fluid">
+        <!-- Site Header -->
+        <span class="navbar-brand" id="id_site_name">Social Network</span>
+
+        <!-- Navbar Links -->
+        <div class="navbar-nav d-flex flex-column align-items-end">
+        <!-- If Logged in Show link to Profile Page -->
+            {% if user.is_authenticated and page_name != "Login" and pagename != "Register"%}
+                <span><a class="nav-link px-2" id='id_nav_profile' href='{% url 'profile' %}''>{{user.first_name}} {{user.last_name}}</a></span>
+            {% else %}
+                <span>&nbsp;</span>
+            {% endif %}
+
+            <ul class="navbar-nav d-flex flex-row justify-content-end, align-items-center">
+                {% for item in navigation_links %}
+                    <li><a class='{{item.class_name}}' id='{{item.id}}' href='{% url item.link %}''>{{item.inner_text}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+      
+    </div>
+</nav>
+{% endblock %}

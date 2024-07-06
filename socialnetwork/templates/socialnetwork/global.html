@@ -1,0 +1,47 @@
+{% extends "socialnetwork/navbar.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="d-flex flex-column justify-content-start align-items-stretch flex-nowrap bg-dark"
+    id="id_global_page_content">
+
+    <!-- PAGE HEADER -->
+    <div class="bg-primary d-flex flex-column justify-content-around align-items-center py-2 my-2" id="id_global_header_row">
+        <!-- PAGE TITLE-->
+        <div class="row justify-content-center align-items-center">
+            <span class="global-page-name" id="id_page_name">{{page_name}}</span>
+        </div>
+
+        <!-- CONSTRUCT POST -->
+        <div class="bg-secondary row justify-content-center align-items-center" id="id_global_post_div">
+            <form class="bg-white d-flex flex-row justify-content-center align-items-center" id="id_post_form" method="post" action="{% url 'global' %}">
+                <div class="bg-primary flex-fill flex-nowrap input-group d-flex flex-row justify-content-around align-items-center text-center" id="id_post_container">
+                    <label class="input-group-text text-center px-2" for="id_post_input_text" id="id_post_input_text_label">New Post:</label>
+                    {{post_form.post_input_text}}
+                    <button type="submit" class="btn btn-light px-2" id="id_post_button">Submit</button>
+                </div>
+                {% csrf_token %}
+            </form>
+        </div>
+
+    </div>
+
+    <!-- PAGE CONTENT -->
+    <div class = "container-fluid flex-grow-1 bg-primary justify-content-center align-items-center py-2" id="id_global_content_div">
+
+
+
+    </div>
+    <script>
+        // Call as soon as document has loaded to display list  
+        window.onload = loadGlobalPost;
+        window.setInterval(loadGlobalPost, 5000);
+
+
+
+    </script>
+
+</div>
+
+{% endblock %}
